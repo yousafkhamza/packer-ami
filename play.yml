@@ -1,0 +1,30 @@
+---
+- name: 'Provision Image'
+  hosts: default
+  become: true
+  vars: 
+    - git_url: "https://github.com/yousafkhamza/aws-elb-site.git"
+  tasks:
+    - name: "install Apache"
+      yum:
+        name: 
+          - httpd
+        state: present
+
+    - name: "Service start"
+      service:
+        name: httpd
+        state: restarted
+        enabled: true
+
+    - name: "Cloning Git Repository"
+      git:
+        repo: "{{ git_url }}"
+        dest: /var/website/
+    - name: "Copy from /var/website to /var/www/html"
+      copy:
+        src: /var/website/
+        dest: /var/www/html/
+        owner: apache
+        group: apache
+      remote_src: true
