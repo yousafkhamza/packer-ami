@@ -2,11 +2,11 @@
 # Variable declaration
 # ---------------------------------------------
 variable "access_key" {
-  default = "AKIA5TTBRI2NQOXVGZGI"
+  default = "<your access key>"
 }
 
 variable "secret_key" {
-  default = "9e2kCHJ/g1uuDpz/Z6uiaL4be4c/rkd0qh3VkJgL"
+  default = "<your secret key>"
 }
 
 variable "type" {
