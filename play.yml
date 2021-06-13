@@ -1,6 +1,7 @@
 ---
 - name: 'Provision Image'
   hosts: localhost
+  gather_facts: false
   become: true
   vars:
     - git_url: "https://github.com/yousafkhamza/aws-elb-site.git"
