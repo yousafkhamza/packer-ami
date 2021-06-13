@@ -1,13 +1,13 @@
 ---
 - name: 'Provision Image'
-  hosts: default
+  hosts: localhost
   become: true
-  vars: 
+  vars:
     - git_url: "https://github.com/yousafkhamza/aws-elb-site.git"
   tasks:
     - name: "install Apache"
       yum:
-        name: 
+        name:
           - httpd
         state: present
 
@@ -21,10 +21,11 @@
       git:
         repo: "{{ git_url }}"
         dest: /var/website/
-    - name: "Copy from /var/website to /var/www/html"
+
+    - name: "Copy from /var/website to /var/www/html/"
       copy:
         src: /var/website/
         dest: /var/www/html/
         owner: apache
         group: apache
-      remote_src: true
+        remote_src: true
