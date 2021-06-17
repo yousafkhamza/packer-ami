@@ -40,8 +40,16 @@ git clone https://github.com/yousafkhamza/packer-ami.git
 cd packer-ami
 packer build main.pkr.hcl
 ```
+
+-----
+## Architecture
+
+
+![alt text]("https://i.ibb.co/HVMkmhG/packer.jpg")
+
 -----
 ### Behind the file
+
 vim main.pkr.hcl
 ```sh
 # ---------------------------------------------
