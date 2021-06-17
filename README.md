@@ -45,7 +45,7 @@ packer build main.pkr.hcl
 ## Architecture
 
 
-![alt text]("https://i.ibb.co/HVMkmhG/packer.jpg")
+![alt text](https://i.ibb.co/HVMkmhG/packer.jpg)
 
 -----
 ### Behind the file
